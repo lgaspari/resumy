@@ -1,0 +1,138 @@
+{
+  "about": [
+    "Experienced Mechanic and Passionate DJ with a successful career spanning nearly 27 years in full-time mechanical work and 19 years as a part-time DJ. Fluent in both English and Spanish, I bring a diverse skill set and a commitment to providing exceptional service.",
+    "Throughout my extensive tenure as a Mechanic, I have developed a deep understanding of automotive systems and a strong ability to troubleshoot and diagnose complex mechanical issues. My expertise spans a wide range of vehicles, from cars and trucks to motorcycles and heavy machinery. With a keen attention to detail and a methodical approach, I consistently deliver accurate repairs and maintenance, ensuring optimal performance and safety for my clients.",
+    "Beyond my technical skills, I take pride in offering outstanding customer service. I firmly believe in the importance of building trust and rapport with clients, listening attentively to their concerns, and providing clear explanations of repair options. My dedication to exceeding customer expectations has resulted in a loyal client base and positive reviews.",
+    "Combining my extensive mechanical knowledge, dedication to customer service, and passion for music, I am equipped with a unique set of skills that sets me apart. I am now seeking new opportunities to contribute my expertise, professionalism, and commitment to excellence in both the mechanical and entertainment industries."
+  ],
+  "certifications": [
+    {
+      "image": "https://static.wikia.nocookie.net/gtawiki/images/9/96/DrivingSchool-GTASA-Gold.png",
+      "name": "Advanced driving maneuvers",
+      "organization": "Turning Tricks Advanced Motoring",
+      "year": "1991"
+    }
+  ],
+  "contact": {
+    "email": {
+      "label": "john.doe@mail.com",
+      "url": "mailto:john.doe@mail.com"
+    },
+    "linkedin": {
+      "label": "LinkedIn Profile",
+      "url": "https://www.linkedin.com/"
+    },
+    "location": {
+      "label": "Los Santos",
+      "url": "https://goo.gl/maps/1JmzUMwnSxPwy1rY9"
+    },
+    "phone": {
+      "label": "(+1) 212-711-1100",
+      "url": "tel:+12127111100"
+    }
+  },
+  "education": [
+    {
+      "degree": "Mechanic Master",
+      "image": "https://static.wikia.nocookie.net/gtawiki/images/4/42/The_University_of_San_Andreas%2C_Los_Santos_Seal.png",
+      "school": "University of San Andreas",
+      "year": "1986"
+    },
+    {
+      "degree": "Mechanic",
+      "image": "https://static.wikia.nocookie.net/gtawiki/images/d/d5/Lossantoselementary.png",
+      "school": "Los Santos High School",
+      "year": "1981 - 1984"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Los Santos Custom",
+      "image": "https://static.wikia.nocookie.net/gtawiki/images/9/92/LSCustoms-GTAV-Logo2.png",
+      "positions": [
+        {
+          "employmentType": "Full-time",
+          "from": "Sep 2017",
+          "title": "Mechanic Lead",
+          "to": "Present"
+        },
+        {
+          "employmentType": "Full-time",
+          "from": "Ene 1996",
+          "title": "Mechanic",
+          "to": "Ago 2017"
+        }
+      ]
+    },
+    {
+      "company": "West Coast Classics",
+      "image": "https://static.wikia.nocookie.net/gtawiki/images/9/9f/WestCoastClassics-GTAV-Logo.svg",
+      "positions": [
+        {
+          "employmentType": "Part-time",
+          "from": "May 2004",
+          "title": "DJ",
+          "to": "Present"
+        }
+      ]
+    }
+  ],
+  "fullName": "John Doe",
+  "languages": [
+    {
+      "image": "https://flagicons.lipis.dev/flags/4x3/gb.svg",
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "image": "https://flagicons.lipis.dev/flags/4x3/es.svg",
+      "name": "Spanish",
+      "level": "Advanced"
+    }
+  ],
+  "profilePicture": "https://i.redd.it/mqlt81qo66291.png",
+  "projects": [
+    {
+      "description": "Go to sleep by listening the sound of tools used by mechanics.",
+      "image": "https://i.pinimg.com/736x/20/78/c8/2078c83255354be541b93c40df37be14.jpg",
+      "name": "Sleep-y",
+      "website": "https://www.google.com.ar/"
+    }
+  ],
+  "skills": [
+    {
+      "highlight": true,
+      "name": "Hand Tools"
+    },
+    {
+      "highlight": true,
+      "name": "Troubleshooting"
+    },
+    {
+      "highlight": true,
+      "name": "Customer Service"
+    },
+    {
+      "name": "Preventive Maintenance"
+    },
+    {
+      "name": "Electrical Systems"
+    },
+    {
+      "name": "Steering and Suspension"
+    },
+    {
+      "details": "Service, Parking, and Emergency",
+      "name": "Brake Systems"
+    },
+    {
+      "details": "Heating, Ventilation, and Air Conditioning",
+      "name": "HVAC Systems"
+    },
+    {
+      "details": "Manual and Automatic",
+      "name": "Transmission"
+    }
+  ],
+  "title": "Mechanic"
+}

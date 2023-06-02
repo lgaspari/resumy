@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Resumy",
+  "name": "Resumy",
+  "description": "Generate your resume from a JSON and download it in PDF format",
   "icons": [
     {
       "src": "favicon.ico",
