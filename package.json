@@ -1,10 +1,13 @@
 {
   "name": "resumy",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
+    "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -26,6 +29,7 @@
     "@types/node": "^16.18.34",
     "@types/react": "^18.2.8",
     "@types/react-dom": "^18.2.4",
+    "gh-pages": "^5.0.0",
     "tailwindcss": "^3.3.2",
     "typescript": "^4.9.5"
   },
