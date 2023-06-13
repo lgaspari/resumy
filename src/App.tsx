@@ -1,7 +1,8 @@
-import { IconDownload } from '@tabler/icons-react';
+import { IconArrowBigUpFilled, IconDownload } from '@tabler/icons-react';
 import PdfResume from 'components/resumes/pdf';
 import exampleResume from 'data/john-doe-resume.json';
 import { useIntersection } from 'hooks/use-intersection';
+import { useWindowScroll } from 'hooks/use-window-scroll';
 import { useEffect, useRef, useState } from 'react';
 
 const stringify = (value: object) => JSON.stringify(value, null, '  ');
@@ -16,6 +17,8 @@ export default function App() {
     threshold: 0.18, // 0.15 seems fine, adding 0.03 to display after contact
   });
 
+  const [scroll, scrollTo] = useWindowScroll();
+
   // ---------------------------------------------------------------------------
 
   /**
@@ -23,14 +26,13 @@ export default function App() {
    */
   useEffect(() => {
     if (resume && resumeRef.current) {
-      window.scrollTo({
-        behavior: 'smooth',
-        top: resumeRef.current!.offsetTop,
-      });
+      scrollTo({ y: resumeRef.current!.offsetTop });
     }
-  }, [resume, resumeRef]);
+  }, [resume, resumeRef, scrollTo]);
 
   // ---------------------------------------------------------------------------
+
+  const handleBackToTopClick = () => scrollTo({ y: 0 });
 
   const handleDownloadResumeClick = () => window.print();
 
@@ -110,6 +112,19 @@ export default function App() {
               </button>
             </div>
           )}
+        </div>
+      )}
+
+      {/* Back to top */}
+      {scroll.y > 0 && (
+        <div className="fixed bottom-4 right-4 flex flex-col items-center print:hidden">
+          <button
+            className="p-3 rounded-full text-white bg-violet-600 hover:bg-violet-800 shadow-lg shadow-black"
+            onClick={handleBackToTopClick}
+            title="Back to top"
+          >
+            <IconArrowBigUpFilled size={24} />
+          </button>
         </div>
       )}
     </div>
