@@ -88,36 +88,36 @@ export default function App() {
 
       {/* Resume */}
       {resume && (
-        <div className="relative" ref={resumeRef}>
-          {/* PDF */}
-          <div className="flex flex-col items-center p-4 pb-24 sm:p-8 sm:pb-24 print:p-0 bg-gray-600 overflow-visible">
-            <div
-              className="shadow-lg shadow-black print:shadow-none"
-              ref={pdfRef}
-            >
-              <PdfResume resume={resume} />
-            </div>
+        <div
+          className="flex flex-col items-center p-4 pb-24 sm:p-8 sm:pb-24 print:p-0 bg-gray-600 overflow-visible"
+          ref={resumeRef}
+        >
+          <div
+            className="shadow-lg shadow-black print:shadow-none"
+            ref={pdfRef}
+          >
+            <PdfResume resume={resume} />
           </div>
-
-          {/* Download */}
-          {entry?.isIntersecting && (
-            <div className="fixed bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center print:hidden">
-              <button
-                className="p-4 flex items-center gap-2 rounded-md text-white text-lg font-bold uppercase bg-violet-600 hover:bg-violet-800 shadow-lg shadow-black animate-bounce"
-                onClick={handleDownloadResumeClick}
-                title="Download resume in PDF format"
-              >
-                <span>Download PDF</span>
-                <IconDownload size={24} />
-              </button>
-            </div>
-          )}
         </div>
       )}
 
-      {/* Back to top */}
+      {/* Download button */}
+      {entry?.isIntersecting && (
+        <div className="fixed bottom-6 sm:bottom-4 left-6 sm:left-1/2 sm:-translate-x-1/2 print:hidden">
+          <button
+            className="p-3 flex items-center gap-2 rounded-md text-white text-lg font-bold leading-4 uppercase whitespace-nowrap bg-violet-600 hover:bg-violet-800 shadow-lg shadow-black sm:animate-bounce"
+            onClick={handleDownloadResumeClick}
+            title="Download resume in PDF format"
+          >
+            Download PDF
+            <IconDownload size={24} />
+          </button>
+        </div>
+      )}
+
+      {/* Back to top button */}
       {scroll.y > 0 && (
-        <div className="fixed bottom-4 right-4 flex flex-col items-center print:hidden">
+        <div className="fixed bottom-6 right-6 print:hidden">
           <button
             className="p-3 rounded-full text-white bg-violet-600 hover:bg-violet-800 shadow-lg shadow-black"
             onClick={handleBackToTopClick}
