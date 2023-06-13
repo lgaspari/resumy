@@ -82,7 +82,7 @@ export default function PdfResume({
           </Section>
 
           <Section header={<Header Icon={IconRocket}>Projects</Header>}>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-6">
               {projects.map(({ description, image, name, website }) => (
                 <Project
                   description={description}
@@ -117,13 +117,15 @@ export default function PdfResume({
                   };
                 })
                 .map(({ company, duration, image, positions }) => (
-                  <Experience
-                    company={company}
-                    duration={duration}
-                    image={image}
-                    key={`${company}-${duration}`}
-                    positions={positions}
-                  />
+                  <div className="py-6 first:pt-0 last:pb-0">
+                    <Experience
+                      company={company}
+                      duration={duration}
+                      image={image}
+                      key={`${company}-${duration}`}
+                      positions={positions}
+                    />
+                  </div>
                 ))}
             </div>
           </Section>
@@ -131,7 +133,7 @@ export default function PdfResume({
 
         <div className="bg-slate-50">
           <Section header={<Header Icon={IconLanguage}>Languages</Header>}>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 print:grid-cols-2 gap-4">
               {languages.map(({ image, name, level }) => (
                 <Language
                   image={image}
@@ -146,7 +148,7 @@ export default function PdfResume({
           <Section
             header={<Header Icon={IconCertificate}>Certifications</Header>}
           >
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 print:grid-cols-2 gap-4">
               {certifications.map(({ name, organization, image, year }) => (
                 <Certification
                   image={image}
@@ -160,7 +162,7 @@ export default function PdfResume({
           </Section>
 
           <Section header={<Header Icon={IconSchool}>Education</Header>}>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 print:grid-cols-2 gap-4">
               {[
                 education.map(({ degree, image, school, year }) => (
                   <Education
@@ -176,7 +178,7 @@ export default function PdfResume({
           </Section>
 
           <Section header={<Header Icon={IconDeviceLaptop}>Skills</Header>}>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 print:grid-cols-3 gap-2">
               {skills.map(({ details, highlight, name }) => (
                 <Skill
                   details={details}

@@ -17,7 +17,7 @@ export default function Experience({
   positions,
 }: ExperienceProps) {
   return (
-    <div className="py-4 first:pt-0 last:pb-0 grid grid-cols-2 gap-4 items-start">
+    <div className="grid grid-cols-1 sm:grid-cols-2 print:grid-cols-2 gap-4 items-start">
       {/* Summary */}
       <div className="flex items-center gap-2">
         <img
@@ -36,7 +36,7 @@ export default function Experience({
       </div>
 
       {/* Details */}
-      <div className="ml-0 flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
         {positions.map(({ duration, employmentType, from, title, to }) => (
           <div className="flex items-start gap-2" key={`${title}-${from}-${to}`}>
             <IconPointFilled className="mt-1 text-slate-700" size={16} />

@@ -49,7 +49,7 @@ export default function App() {
   return (
     <div>
       {/* Landing */}
-      <div className="min-h-screen p-8 flex flex-col print:hidden">
+      <div className="min-h-screen p-4 pt-8 sm:p-8 flex flex-col print:hidden">
         <div className="max-w-a4 w-[100%] mx-auto flex flex-col flex-grow gap-8">
           {/* Header */}
           <div>
@@ -90,7 +90,7 @@ export default function App() {
       {resume && (
         <div className="relative" ref={resumeRef}>
           {/* PDF */}
-          <div className="flex flex-col items-center p-8 pb-24 print:p-0 bg-gray-600 overflow-visible">
+          <div className="flex flex-col items-center p-4 pb-24 sm:p-8 sm:pb-24 print:p-0 bg-gray-600 overflow-visible">
             <div
               className="shadow-lg shadow-black print:shadow-none"
               ref={pdfRef}
