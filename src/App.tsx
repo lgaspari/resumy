@@ -1,5 +1,7 @@
+import { IconDownload } from '@tabler/icons-react';
 import PdfResume from 'components/resumes/pdf';
 import exampleResume from 'data/john-doe-resume.json';
+import { useIntersection } from 'hooks/use-intersection';
 import { useEffect, useRef, useState } from 'react';
 
 const stringify = (value: object) => JSON.stringify(value, null, '  ');
@@ -9,6 +11,10 @@ export default function App() {
   const [resume, setResume] = useState(null);
 
   const resumeRef = useRef<HTMLDivElement | null>(null);
+
+  const { entry, ref: pdfRef } = useIntersection({
+    threshold: 0.18, // 0.15 seems fine, adding 0.03 to display after contact
+  });
 
   // ---------------------------------------------------------------------------
 
@@ -25,6 +31,8 @@ export default function App() {
   }, [resume, resumeRef]);
 
   // ---------------------------------------------------------------------------
+
+  const handleDownloadResumeClick = () => window.print();
 
   const handleGenerateResumeClick = () => {
     const resume = JSON.parse(value);
@@ -79,11 +87,29 @@ export default function App() {
       {/* Resume */}
       {resume && (
         <div className="relative" ref={resumeRef}>
-          <div className="flex flex-col items-center p-8 print:p-0 bg-gray-600 overflow-visible">
-            <div className="shadow-lg shadow-black print:shadow-none">
+          {/* PDF */}
+          <div className="flex flex-col items-center p-8 pb-24 print:p-0 bg-gray-600 overflow-visible">
+            <div
+              className="shadow-lg shadow-black print:shadow-none"
+              ref={pdfRef}
+            >
               <PdfResume resume={resume} />
             </div>
           </div>
+
+          {/* Download */}
+          {entry?.isIntersecting && (
+            <div className="fixed bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center print:hidden">
+              <button
+                className="p-4 flex items-center gap-2 rounded-md text-white text-lg font-bold uppercase bg-violet-600 hover:bg-violet-800 shadow-lg shadow-black animate-bounce"
+                onClick={handleDownloadResumeClick}
+                title="Download resume in PDF format"
+              >
+                <span>Download PDF</span>
+                <IconDownload size={24} />
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>
