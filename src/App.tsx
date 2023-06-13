@@ -119,7 +119,7 @@ export default function App() {
       {scroll.y > 0 && (
         <div className="fixed bottom-6 right-6 print:hidden">
           <button
-            className="p-3 rounded-full text-white bg-violet-600 hover:bg-violet-800 shadow-lg shadow-black"
+            className="p-3 rounded-md text-white bg-violet-600 hover:bg-violet-800 shadow-lg shadow-black"
             onClick={handleBackToTopClick}
             title="Back to top"
           >
