@@ -105,7 +105,7 @@ export default function App() {
       {entry?.isIntersecting && (
         <div className="fixed bottom-6 sm:bottom-4 left-6 sm:left-1/2 sm:-translate-x-1/2 print:hidden">
           <button
-            className="p-3 flex items-center gap-2 rounded-md text-white text-lg font-bold leading-4 uppercase whitespace-nowrap bg-violet-600 hover:bg-violet-800 shadow-lg shadow-slate-800 sm:animate-bounce"
+            className="p-3 flex items-center gap-2 rounded-md text-white text-lg font-bold leading-4 uppercase whitespace-nowrap bg-violet-600 hover:bg-violet-800 shadow-md shadow-slate-800 sm:animate-bounce"
             onClick={handleDownloadResumeClick}
             title="Download resume in PDF format"
           >
@@ -119,7 +119,7 @@ export default function App() {
       {scroll.y > 0 && (
         <div className="fixed bottom-6 right-6 print:hidden">
           <button
-            className="p-3 rounded-md text-white bg-violet-600 hover:bg-violet-800 shadow-lg shadow-slate-800"
+            className="p-3 rounded-md text-white bg-violet-600 hover:bg-violet-800 shadow-md shadow-slate-800"
             onClick={handleBackToTopClick}
             title="Back to top"
           >
