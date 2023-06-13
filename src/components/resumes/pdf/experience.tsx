@@ -17,7 +17,7 @@ export default function Experience({
   positions,
 }: ExperienceProps) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 print:grid-cols-2 gap-4 items-start">
+    <div className="grid grid-cols-1 sm:grid-cols-2 print:portrait:grid-cols-2 print:landscape:grid-cols-1 gap-4 items-start">
       {/* Summary */}
       <div className="flex items-center gap-2">
         <img

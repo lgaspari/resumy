@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply print:bg-slate-50;
+  }
   h1 {
     @apply font-notoSans;
     @apply font-extrabold;

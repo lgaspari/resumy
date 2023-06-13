@@ -89,7 +89,7 @@ export default function App() {
       {/* Resume */}
       {resume && (
         <div
-          className="flex flex-col items-center p-4 pb-24 sm:p-8 sm:pb-24 print:p-0 bg-gray-600 overflow-visible"
+          className="flex flex-col items-center p-4 pb-24 sm:p-8 sm:pb-24 print:portrait:p-0 print:landscape:p-0 bg-gray-600"
           ref={resumeRef}
         >
           <div
