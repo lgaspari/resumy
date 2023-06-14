@@ -13,7 +13,7 @@ export default function ProfilePicture({
     <div className="rounded-full overflow-hidden">
       <img
         alt={fullName}
-        className="aspect-square"
+        className="aspect-square object-cover"
         height={SIZE}
         src={profilePicture}
         width={SIZE}
