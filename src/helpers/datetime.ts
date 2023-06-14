@@ -1,11 +1,5 @@
 import dayjs from 'dayjs';
-import duration from 'dayjs/plugin/duration';
-import relativeTime from 'dayjs/plugin/relativeTime';
 import humanizeDuration from 'humanize-duration';
-
-// configure extensions
-dayjs.extend(duration);
-dayjs.extend(relativeTime);
 
 /**
  * Returns the Dayjs object based on the date sent by parameter.
