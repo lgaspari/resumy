@@ -16,18 +16,22 @@ export function getDate(date?: Date | number | string, format?: string) {
 
 /**
  * Calculates the difference between `from` and `to` experience position dates.
+ *
+ * Taking into consideration that dates without day will be invalid in Safari
+ * as well as in iOS devices, we must tweak this helper function to assume it's
+ * the first day of the month when parsing.
  */
 export function getExperiencePositionDifference(
   from: string,
   to: 'Present' | string,
 ) {
-  const format = 'MMMM YYYY';
+  const appendDay = (date: string) => `1 ${date}`;
   const unit = 'month';
 
-  const dateFrom = getDate(from, format).startOf(unit);
-  const dateTo = getDate(to !== 'Present' ? to : undefined, format).endOf(unit);
+  const start = getDate(appendDay(from)).startOf(unit);
+  const end = getDate(to !== 'Present' ? appendDay(to) : undefined).endOf(unit);
 
-  return dateFrom.diff(dateTo);
+  return start.diff(end);
 }
 
 /**
