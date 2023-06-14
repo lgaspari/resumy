@@ -54,7 +54,8 @@ export default function App() {
           {/* Header */}
           <div>
             <h1 className="mb-4">
-              Resumy<span className="text-violet-600">.</span>
+              Resumy
+              <span className="text-violet-600">.</span>
             </h1>
             <h2 className="font-semibold text-xl text-gray-500">
               Generate your resume from a JSON and download it in PDF format
