@@ -110,12 +110,14 @@ export default function PdfResume({
                   };
                 })
                 .map(({ company, duration, image, positions }) => (
-                  <div className="py-6 first:pt-0 last:pb-0">
+                  <div
+                    className="py-6 first:pt-0 last:pb-0"
+                    key={`${company}-${duration}`}
+                  >
                     <Experience
                       company={company}
                       duration={duration}
                       image={image}
-                      key={`${company}-${duration}`}
                       positions={positions}
                     />
                   </div>
