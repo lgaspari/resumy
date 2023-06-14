@@ -21,7 +21,7 @@ export function getExperiencePositionDifference(
   from: string,
   to: 'Present' | string,
 ) {
-  const format = 'MMM YYYY';
+  const format = 'MMMM YYYY';
   const unit = 'month';
 
   const dateFrom = getDate(from, format).startOf(unit);
