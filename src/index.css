@@ -7,36 +7,39 @@
   html {
     --resume-color: unset;
   }
-
   body {
     @apply print:bg-slate-50;
   }
 
   h1 {
-    @apply font-notoSans;
-    @apply font-extrabold;
-    @apply text-5xl;
+    @apply font-notoSans font-extrabold text-5xl;
   }
   h2 {
-    @apply font-notoSans;
-    @apply font-bold;
-    @apply text-4xl;
+    @apply font-notoSans font-bold text-4xl;
   }
   h3 {
-    @apply font-notoSans;
-    @apply font-semibold;
-    @apply text-2xl;
+    @apply font-notoSans font-semibold text-2xl;
   }
   h4 {
-    @apply font-semibold;
-    @apply text-lg;
+    @apply font-semibold text-lg;
   }
   h5 {
-    @apply font-semibold;
-    @apply text-base;
+    @apply font-semibold text-base;
   }
   h6 {
-    @apply font-semibold;
-    @apply text-sm;
+    @apply font-semibold text-sm;
+  }
+
+  .btn-primary {
+    @apply p-3 rounded-md;
+    @apply text-white text-lg font-bold uppercase;
+    @apply bg-violet-600 hover:bg-violet-700 active:bg-violet-800 disabled:bg-gray-400;
+    @apply shadow-md hover:shadow-md active:shadow-lg;
+    @apply shadow-gray-400 hover:shadow-gray-500 active:shadow-gray-500;
+    @apply transition-[background-color,box-shadow];
+  }
+
+  .btn-elevated {
+    @apply shadow-gray-800 hover:shadow-gray-900 active:shadow-gray-900;
   }
 }
