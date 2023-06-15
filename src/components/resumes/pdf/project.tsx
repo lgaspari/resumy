@@ -23,7 +23,7 @@ export default function Project({
       />
       <div>
         <a
-          className="text-black hover:text-neutral-500"
+          className="text-black"
           href={website}
           rel="noreferrer"
           target="_blank"

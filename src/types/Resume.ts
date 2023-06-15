@@ -52,6 +52,7 @@ export interface Skill {
 }
 
 export default interface Resume {
+  _metadata: { color: string; };
   about: Array<About>;
   certifications: Array<Certification>;
   contact: {

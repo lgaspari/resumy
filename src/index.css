@@ -4,9 +4,14 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    --resume-color: unset;
+  }
+
   body {
     @apply print:bg-slate-50;
   }
+
   h1 {
     @apply font-notoSans;
     @apply font-extrabold;

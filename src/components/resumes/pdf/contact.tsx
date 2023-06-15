@@ -12,7 +12,7 @@ export default function Contact({
 }: ContactProps) {
   return (
     <a
-      className="flex items-center gap-1 text-sm text-slate-900 underline hover:text-neutral-300"
+      className="flex items-center gap-1 text-sm text-slate-900 underline hover:text-slate-100"
       href={url}
       rel="noreferrer"
       target="_blank"

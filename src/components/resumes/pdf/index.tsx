@@ -12,6 +12,7 @@ import {
   IconSchool,
 } from '@tabler/icons-react';
 import { getExperiencePositionDifference } from 'helpers/datetime';
+import { useEffect } from 'react';
 import type Resume from 'types/Resume';
 import Certification from './certification';
 import Contact from './contact';
@@ -30,6 +31,7 @@ interface PdfResumeProps {
 
 export default function PdfResume({
   resume: {
+    _metadata: { color },
     about,
     certifications,
     contact,
@@ -43,10 +45,20 @@ export default function PdfResume({
     title,
   },
 }: PdfResumeProps) {
+  /**
+   * Updates the `--resume-color` CSS variable based on metadata color
+   */
+  useEffect(() => {
+    document.documentElement.style.setProperty('--resume-color', color);
+  }, [color]);
+
   return (
     <div className="min-h-a4 max-w-a4 print:max-w-none w-[100%] bg-white">
       {/* Header */}
-      <div className="p-8 flex flex-wrap items-start gap-8 bg-neutral-500">
+      <div
+        className="p-8 flex flex-wrap items-start gap-8"
+        style={{ backgroundColor: 'var(--resume-color)' }}
+      >
         <ProfilePicture fullName={fullName} profilePicture={profilePicture} />
         <div>
           <h1 className="mb-2 text-slate-100">{fullName}</h1>
