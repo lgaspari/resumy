@@ -50,5 +50,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "author": {
+    "name": "Leandro Gaspari",
+    "email": "leandro.ezequiel.gaspari@gmail.com",
+    "url": "https://github.com/lgaspari"
   }
 }
