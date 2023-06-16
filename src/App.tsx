@@ -50,9 +50,16 @@ export default function App() {
     <div>
       {/* Header */}
       <div className="absolute top-1 right-1">
-        <a className="opacity-50 hover:opacity-100" href="https://github.com/lgaspari" rel="noreferrer" target="_blank" title="Leandro Gaspari's GitHub profile">
+        <a
+          className="rounded-full overflow-hidden opacity-50 hover:opacity-100 focus:opacity-100 active:opacity-100"
+          href="https://github.com/lgaspari"
+          rel="noreferrer"
+          target="_blank"
+          title="Leandro Gaspari's GitHub profile"
+        >
           <img
-            alt="GitHub Mark"
+            alt="GitHub Logo"
+            className="inline-block"
             height={24}
             src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
             width={24}
