@@ -69,7 +69,7 @@ export default function App() {
                 JSON
               </label>
               <textarea
-                className="w-[100%] min-h-[300px] flex-grow p-4 rounded-md outline-violet-600 border"
+                className="w-[100%] min-h-[300px] flex-grow p-4 rounded-md border"
                 id="json"
                 onChange={(e) => setValue(e.currentTarget.value)}
                 value={value}
