@@ -48,6 +48,18 @@ export default function App() {
 
   return (
     <div>
+      {/* Header */}
+      <div className="absolute top-1 right-1">
+        <a className="opacity-50 hover:opacity-100" href="https://github.com/lgaspari" rel="noreferrer" target="_blank" title="Leandro Gaspari's GitHub profile">
+          <img
+            alt="GitHub Mark"
+            height={24}
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            width={24}
+          />
+        </a>
+      </div>
+
       {/* Landing */}
       <div className="min-h-screen p-4 pt-8 sm:p-8 flex flex-col print:hidden">
         <div className="max-w-a4 w-[100%] mx-auto flex flex-col flex-grow gap-8">
